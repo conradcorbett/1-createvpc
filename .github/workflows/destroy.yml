@@ -30,4 +30,5 @@ jobs:
       - name: Terraform Destroy
         working-directory: .
         run: |
+          terraform init
           terraform apply -auto-approve -destroy
