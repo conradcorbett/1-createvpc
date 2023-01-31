@@ -4,8 +4,8 @@ on:
   workflow_dispatch
 
 jobs:
-  deploy:
-    name: Deploy
+  destroy:
+    name: Destroy
     runs-on: ubuntu-latest
     env:
       environment: dev
@@ -30,4 +30,4 @@ jobs:
       - name: Terraform Destroy
         working-directory: .
         run: |
-          terraform apply -auto-approve tfdestroy
+          terraform apply -auto-approve -destroy
